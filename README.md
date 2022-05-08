@@ -1,3 +1,4 @@
+![wakatime](https://wakatime.com/badge/user/28322718-7195-4c0a-9416-046928b580f5/project/22b6fd75-7fc9-4c94-84d1-203ce2dc050a.svg)
 # CSharpIDE
  Среда разработки C# для Windows с открытым исходным кодом
 ## Функции
