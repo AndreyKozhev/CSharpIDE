@@ -4,6 +4,7 @@
 ![](https://img.shields.io/badge/License-MIT-yellow)
 ![](https://img.shields.io/badge/Type-IDE-yellowgreen)
 ![](https://img.shields.io/badge/Platform-Windows-red)
+![](https://img.shields.io/badge/Language-C%23-orange)
 # CSharpIDE
  Среда разработки C# для Windows с открытым исходным кодом
 ## Функции
