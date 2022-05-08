@@ -1,0 +1,41 @@
+﻿<Window x:Class="CSharpIDE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpIDE"
+        mc:Ignorable="d"
+        Title="CSharpIDE" Height="450" Width="800" Background="White">
+    <DockPanel>
+        <Menu Height="19" VerticalAlignment="Top" DockPanel.Dock="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Name="create" Header="Создать" Click="Create_Click"/>
+                <MenuItem Name="open" Header="Открыть" Click="Open_Click"/>
+                <MenuItem Name="save" Header="Сохранить" Click="Save_Click"/>
+                <Separator/>
+                <MenuItem Name="exit" Header="Выйти" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Редактировать" >
+                <MenuItem Header="Вставить" Click="Paste_Click"/>
+                <MenuItem Header="Очистить" Click="Clear_Click"/>
+            </MenuItem>
+            <MenuItem Header="Запуск" >
+                <MenuItem Header="Пуск" Click="Start_Click"/>
+                <MenuItem Header="Компилировать" Click="Compile_Click"/>
+            </MenuItem>
+        </Menu>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Top" Height="26" Orientation="Horizontal">
+                <Button Content="О приложении" Width="98" Margin="5,1,1,-0.4" Height="20" Click="Button_Click"/>
+            </StackPanel>
+            <avalonEdit:TextEditor
+                xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"
+                Name="Editor"
+                FontFamily="Consolas"
+                SyntaxHighlighting="C#"
+                ShowLineNumbers="True"
+                FontSize="10pt" Margin="10,10,9.6,10"
+                DockPanel.Dock="Bottom"/>
+        </DockPanel>
+    </DockPanel>
+</Window>
