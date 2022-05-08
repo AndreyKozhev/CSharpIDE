@@ -18,6 +18,8 @@
     - [ ] Консоль
     - [ ] Графичечкий интерфейс
 - [ ] Консоль
+## Вклад
+См. [руководство по внесению вклада](/main/CONTRIBUTING.md)
 ## Благодарности
 + [icsharpcode](https://github.com/icsharpcode) за [AvalonEdit](https://github.com/icsharpcode/AvalonEdit)  
 А также всем разработчикам, которые участвуют в проекте.
