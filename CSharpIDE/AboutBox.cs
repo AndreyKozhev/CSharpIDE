@@ -106,5 +106,11 @@ namespace CSharpIDE
         {
             Close();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            var url = "https://github.com/AndreyKozhev/CSharpIDE/";
+            System.Diagnostics.Process.Start(url);
+        }
     }
 }
