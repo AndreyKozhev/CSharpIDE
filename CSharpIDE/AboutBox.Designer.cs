@@ -132,9 +132,9 @@
             this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 29);
+            this.label1.Size = new System.Drawing.Size(45, 29);
             this.label1.TabIndex = 25;
-            this.label1.Text = "GitHub";
+            this.label1.Text = "C#";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AboutBox

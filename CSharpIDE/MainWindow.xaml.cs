@@ -145,8 +145,8 @@ namespace CSharpIDE
                 foreach (CompilerError CompErr in results.Errors)
                 {
                     errors = errors +
-                                "Line number " + CompErr.Line +
-                                ", Error Number: " + CompErr.ErrorNumber +
+                                "Строка " + CompErr.Line +
+                                ", Номер: " + CompErr.ErrorNumber +
                                 ", '" + CompErr.ErrorText + ";" +
                                 Environment.NewLine + Environment.NewLine;
                     MessageBox.Show("Ошибки: " + errors);
