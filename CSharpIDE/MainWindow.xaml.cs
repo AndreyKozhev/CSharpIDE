@@ -30,6 +30,10 @@ namespace CSharpIDE
         public MainWindow()
         {
             InitializeComponent();
+            List<string> styles = new List<string> { "light", "dark" };
+            styleBox.SelectionChanged += ThemeChange;
+            styleBox.ItemsSource = styles;
+            styleBox.SelectedItem = "light";
         }
 
         private void Open_Click(object sender, RoutedEventArgs e)
@@ -37,7 +41,7 @@ namespace CSharpIDE
             Microsoft.Win32.OpenFileDialog OpenFile = new Microsoft.Win32.OpenFileDialog();
             OpenFile.Title = "Выберите файл для открытия";
             OpenFile.Multiselect = false;
-            OpenFile.Filter = "CS|*.cs|XAML|.xaml";
+            OpenFile.Filter = "CS|*.cs";
             string file_name = OpenFile.FileName;
             if (OpenFile.ShowDialog() == true)
             {
@@ -51,7 +55,7 @@ namespace CSharpIDE
         {
             Microsoft.Win32.SaveFileDialog SaveFile = new Microsoft.Win32.SaveFileDialog();
             SaveFile.Title = "Выберите место для сохранения";
-            SaveFile.Filter = "CS|*.cs|XAML|.xaml";
+            SaveFile.Filter = "CS|*.cs";
             if (SaveFile.ShowDialog() == true)
             {
                 File.WriteAllText(SaveFile.FileName, Editor.Text);
@@ -62,7 +66,7 @@ namespace CSharpIDE
         {
             Microsoft.Win32.SaveFileDialog SaveFile = new Microsoft.Win32.SaveFileDialog();
             SaveFile.Title = "Выберите место для создания файла";
-            SaveFile.Filter = "CS|*.cs|XAML|.xaml";
+            SaveFile.Filter = "CS|*.cs";
             if (SaveFile.ShowDialog() == true)
             {
                 try
@@ -109,8 +113,8 @@ namespace CSharpIDE
                 foreach (CompilerError CompErr in results.Errors)
                 {
                     errors = errors +
-                                "Line number " + CompErr.Line +
-                                ", Error Number: " + CompErr.ErrorNumber +
+                                "Строка " + CompErr.Line +
+                                ", Номер: " + CompErr.ErrorNumber +
                                 ", '" + CompErr.ErrorText + ";" +
                                 Environment.NewLine + Environment.NewLine;
                     MessageBox.Show("Ошибки: " + errors);
@@ -184,6 +188,19 @@ namespace CSharpIDE
         {
             AboutBox aboutBox = new AboutBox();
             aboutBox.ShowDialog();
+        }
+
+        private void ThemeChange(object sender, SelectionChangedEventArgs e)
+        {
+            string style = styleBox.SelectedItem as string;
+            // определяем путь к файлу ресурсов
+            var uri = new Uri(style + ".xaml", UriKind.Relative);
+            // загружаем словарь ресурсов
+            ResourceDictionary resourceDict = Application.LoadComponent(uri) as ResourceDictionary;
+            // очищаем коллекцию ресурсов приложения
+            Application.Current.Resources.Clear();
+            // добавляем загруженный словарь ресурсов
+            Application.Current.Resources.MergedDictionaries.Add(resourceDict);
         }
     }
 }

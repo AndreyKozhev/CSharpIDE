@@ -3,32 +3,33 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CSharpIDE"
         mc:Ignorable="d"
-        Title="CSharpIDE" Height="450" Width="800" Background="White">
+        Title="CSharpIDE" Height="450" Width="800" Style="{DynamicResource WindowStyle}">
     <DockPanel>
-        <Menu Height="19" VerticalAlignment="Top" DockPanel.Dock="Top">
-            <MenuItem Header="Файл">
-                <MenuItem Name="create" Header="Создать" Click="Create_Click"/>
-                <MenuItem Name="open" Header="Открыть" Click="Open_Click"/>
-                <MenuItem Name="save" Header="Сохранить" Click="Save_Click"/>
+        <Menu Height="19" VerticalAlignment="Top" DockPanel.Dock="Top" Style="{DynamicResource MenuStyle}">
+            <MenuItem Header="Файл" Style="{DynamicResource MenuItemStyle}">
+                <MenuItem Name="create" Header="Создать" Click="Create_Click" Style="{DynamicResource MenuItemStyle}"/>
+                <MenuItem Name="open" Header="Открыть" Click="Open_Click" Style="{DynamicResource MenuItemStyle}"/>
+                <MenuItem Name="save" Header="Сохранить" Click="Save_Click" Style="{DynamicResource MenuItemStyle}"/>
                 <Separator/>
-                <MenuItem Name="exit" Header="Выйти" Click="Exit_Click"/>
+                <MenuItem Name="exit" Header="Выйти" Click="Exit_Click" Style="{DynamicResource MenuItemStyle}"/>
             </MenuItem>
-            <MenuItem Header="Редактировать" >
-                <MenuItem Header="Вставить" Click="Paste_Click"/>
-                <MenuItem Header="Очистить" Click="Clear_Click"/>
+            <MenuItem Header="Редактировать" Style="{DynamicResource MenuItemStyle}">
+                <MenuItem Header="Вставить" Click="Paste_Click" Style="{DynamicResource MenuItemStyle}"/>
+                <MenuItem Header="Очистить" Click="Clear_Click" Style="{DynamicResource MenuItemStyle}"/>
             </MenuItem>
-            <MenuItem Header="Запуск" >
-                <MenuItem Header="Пуск" Click="Start_Click"/>
-                <MenuItem Header="Компилировать" Click="Compile_Click"/>
+            <MenuItem Header="Запуск" Style="{DynamicResource MenuItemStyle}">
+                <MenuItem Header="Пуск" Click="Start_Click" Style="{DynamicResource MenuItemStyle}"/>
+                <MenuItem Header="Компилировать" Click="Compile_Click" Style="{DynamicResource MenuItemStyle}"/>
             </MenuItem>
         </Menu>
         <DockPanel>
             <StackPanel DockPanel.Dock="Top" Height="26" Orientation="Horizontal">
-                <Button Content="О приложении" Width="98" Margin="5,1,5,-0.4" Height="20" Click="Button_Click"/>
-                <Label Content="Размер шрифта:"/>
-                <TextBox x:Name="textBox" Text="10" Width="100" Height="20"/>
+                <Button Content="О приложении" Width="98" Margin="5,1,5,-0.4" Height="20" Click="Button_Click" Style="{DynamicResource ButtonStyle}"/>
+                <Label Content="Размер шрифта:" Style="{DynamicResource LabelStyle}"/>
+                <TextBox x:Name="textBox" Text="10" Width="100" Height="25"/>
+                <Label Content="Тема:" Style="{DynamicResource LabelStyle}"/>
+                <ComboBox x:Name="styleBox" Margin="0,0,0,-0.4" Width="100"  Height="25"/>
             </StackPanel>
             <avalonEdit:TextEditor
                 xmlns:avalonEdit="http://icsharpcode.net/sharpdevelop/avalonedit"

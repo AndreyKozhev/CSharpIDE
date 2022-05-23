@@ -5,6 +5,7 @@
 ![](https://img.shields.io/badge/Type-IDE-yellowgreen)
 ![](https://img.shields.io/badge/Platform-Windows-red)
 ![](https://img.shields.io/badge/Language-C%23-orange)
+![](https://img.shields.io/badge/Current%20Version-1.1-lightgrey)
 # CSharpIDE
  Среда разработки C# для Windows с открытым исходным кодом
 ## Функции
@@ -27,7 +28,7 @@
     - [ ] Графичечкий интерфейс
 - [ ] Консоль
 ## Вклад
-См. [руководство по внесению вклада](/CONTRIBUTING.MD)
+См. [руководство по внесению вклада](./CONTRIBUTING.MD)
 ## Благодарности
 + [icsharpcode](https://github.com/icsharpcode) за [AvalonEdit](https://github.com/icsharpcode/AvalonEdit)  
 А также всем разработчикам, которые участвуют в проекте.
