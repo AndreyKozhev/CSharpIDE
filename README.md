@@ -1,5 +1,4 @@
 ![](./CSharpIDE-GitHub.png)
-![wakatime](https://wakatime.com/badge/user/28322718-7195-4c0a-9416-046928b580f5/project/22b6fd75-7fc9-4c94-84d1-203ce2dc050a.svg)
 ![](https://img.shields.io/badge/.NET-4.6.1-green)
 ![](https://img.shields.io/badge/License-MIT-yellow)
 ![](https://img.shields.io/badge/Type-IDE-yellowgreen)
